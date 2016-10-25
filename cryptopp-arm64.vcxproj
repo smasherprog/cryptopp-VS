@@ -87,6 +87,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>cryptopp\pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)cryptopp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_PRECOMPILED_HEADERS;</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_shared|ARM64'">
@@ -99,6 +100,7 @@
       <Verbose>false</Verbose>
       <AdditionalOptions>
       </AdditionalOptions>
+      <PreprocessorDefinitions>USE_PRECOMPILED_HEADERS;</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <UnresolvedSymbolReferences>true</UnresolvedSymbolReferences>
@@ -110,6 +112,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>cryptopp\pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)cryptopp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;USE_PRECOMPILED_HEADERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_shared|ARM64'">
@@ -120,10 +123,11 @@
       <ExceptionHandling>UnwindTables</ExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>NDEBUG;USE_PRECOMPILED_HEADERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Lib />
     <Link>
-      <UnresolvedSymbolReferences>false</UnresolvedSymbolReferences>
+      <UnresolvedSymbolReferences>true</UnresolvedSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

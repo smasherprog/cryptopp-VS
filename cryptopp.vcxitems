@@ -13,8 +13,9 @@
   <!-- Source Files -->
   <!-- Header Files -->
   <ItemGroup>
-    <ProjectCapability Include="SourceItemsFromImports" />
+    <ProjectCapability Include="$(MSBuildThisFileDirectory)cryptopp\SourceItemsFromImports" />
   </ItemGroup>
+  
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\cryptlib.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\cpu.cpp" />
@@ -47,22 +48,30 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\dessp.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\dh.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\dh2.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\dll.cpp">
+      <PrecompiledHeader />
+    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\dsa.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\eax.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\ec2n.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\eccrypto.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\eccrypto.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\ecp.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\elgamal.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\emsa2.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\eprecomp.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\eprecomp.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\esign.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\files.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\filters.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\fips140.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\fipstest.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gcm.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gf256.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gf2n.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gf2_32.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gf2n.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gfpcrypt.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gost.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\gzip.cpp" />
@@ -72,7 +81,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\ida.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\idea.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\iterhash.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader />
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\keccak.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\luc.cpp" />
@@ -92,7 +101,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\panama.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\pkcspad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\polynomi.cpp" />
@@ -121,6 +129,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\shacal2.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\shark.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\sharkbox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\simple.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\skipjack.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\socketft.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\sosemanuk.cpp" />
@@ -138,6 +147,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\wait.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\wake.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\whrlpool.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\winpipes.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\xtr.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\xtrcrypt.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\zdeflate.cpp" />

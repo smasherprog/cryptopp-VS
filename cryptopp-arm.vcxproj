@@ -115,7 +115,7 @@
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <LibraryDependencies>m;%(LibraryDependencies)</LibraryDependencies>
       <VerboseOutput>false</VerboseOutput>
-      <UnresolvedSymbolReferences>false</UnresolvedSymbolReferences>
+      <UnresolvedSymbolReferences>true</UnresolvedSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|ARM'">
