@@ -92,6 +92,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\panama.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\pkcspad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\polynomi.cpp" />
