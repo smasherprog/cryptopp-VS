@@ -128,4 +128,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\zinflate.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\zlib.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cryptopp\rdrand.S" />
+  </ItemGroup>
 </Project>

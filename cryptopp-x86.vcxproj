@@ -18,6 +18,19 @@
       <Platform>x86</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cryptopp\rdrand.S">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
+    </CustomBuild>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4fb532d4-8846-43da-b7b2-48e9285044b2}</ProjectGuid>
     <Keyword>Android</Keyword>
@@ -106,6 +119,7 @@
       <LibraryDependencies>m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
       <WholeArchiveBegin>false</WholeArchiveBegin>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)$(IntermediateOutputPath)rdrand-$(Platform).o</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|x86'">
@@ -129,6 +143,7 @@
     </ClCompile>
     <Link>
       <LibraryDependencies>m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)$(IntermediateOutputPath)rdrand-$(Platform).o</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
