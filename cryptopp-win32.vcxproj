@@ -186,6 +186,19 @@
       <Outputs>$(IntDir)x64masm.obj;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cryptopp\rdrand.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|Win32'">ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo "$(IntDir)rdrand-x86.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|Win32'">$(IntDir)\rdrand-x86.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|Win32'">ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo "$(IntDir)rdrand-x86.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|Win32'">$(IntDir)\rdrand-x86.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|Win32'">ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo "$(IntDir)rdrand-x86.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|Win32'">$(IntDir)\rdrand-x86.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|Win32'">ml.exe /c /nologo /D_M_X86 /W3 /Cx /Zi /safeseh /Fo "$(IntDir)rdrand-x86.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|Win32'">$(IntDir)\rdrand-x86.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

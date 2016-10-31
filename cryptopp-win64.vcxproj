@@ -18,6 +18,43 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cryptopp\rdrand.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">%(Filename).obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cryptopp\x64dll.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">%(Filename).obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="cryptopp\x64masm.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">%(Filename).obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3A100A12-0624-45EE-AD3E-46ACFF052D79}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
