@@ -21,10 +21,10 @@
   <ItemGroup>
     <CustomBuild Include="cryptopp\rdrand.S">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x86'">nasm -f elf32 "%(FullPath)" -DX86 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x86'">nasm -f elf32 "%(FullPath)" -DX86 -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x86'">nasm -f elf32 "%(FullPath)" -DX86 -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x86'">nasm -f elf32 "%(FullPath)" -DX86 -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x86'">nasm -f elf32 "%(FullPath)" -DX86 -o $(IntDir)%(Filename)-$(Platform).o</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x86'">$(IntDir)%(Filename)-$(Platform).o</Outputs>

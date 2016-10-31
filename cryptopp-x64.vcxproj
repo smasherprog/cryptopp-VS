@@ -23,12 +23,12 @@
       <FileType>Document</FileType>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">nasm -f elf64 "%(FullPath)" -DX64 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">nasm -f elf64 "%(FullPath)" -DX64 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">nasm -f elf64 "%(FullPath)" -DX64 -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">nasm -f elf64 "%(FullPath)" -DX64 -o $(IntDir)%(Filename)-$(Platform).o</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">$(IntDir)%(Filename)-$(Platform).o</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">nasm -f elf64 "%(FullPath)" -DX64 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">nasm -f elf64 "%(FullPath)" -DX64 -g -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">nasm -f elf64 "%(FullPath)" -DX64 -o $(IntDir)%(Filename)-$(Platform).o</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">nasm -f elf64 "%(FullPath)" -DX64 -o $(IntDir)%(Filename)-$(Platform).o</Command>
     </CustomBuild>
   </ItemGroup>
   <PropertyGroup Label="Globals">
