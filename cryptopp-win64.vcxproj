@@ -21,14 +21,14 @@
   <ItemGroup>
     <CustomBuild Include="cryptopp\rdrand.asm">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">$(IntDir)%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">$(IntDir)%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">$(IntDir)%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename).obj" "%(FullPath)"</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename)-x64.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">$(IntDir)%(Filename)-x64.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename)-x64.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_shared|x64'">$(IntDir)%(Filename)-x64.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename)-x64.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_shared|x64'">$(IntDir)%(Filename)-x64.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">ml64.exe /c /nologo /D_M_X64 /W3 /Cx /Zi /Fo"$(IntDir)%(Filename)-x64.obj" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">$(IntDir)%(Filename)-x64.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
