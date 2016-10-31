@@ -131,8 +131,6 @@
   <ItemGroup>
     <CustomBuild Include="cryptopp\rdrand.asm" />
     <CustomBuild Include="cryptopp\x64masm.asm" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cryptopp\x64dll.asm" />
+    <CustomBuild Include="cryptopp\x64dll.asm" />
   </ItemGroup>
 </Project>
