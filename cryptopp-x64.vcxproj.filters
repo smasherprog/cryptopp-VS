@@ -129,6 +129,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)cryptopp\zlib.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cryptopp\rdrand.S" />
+    <CustomBuild Include="cryptopp\rdrand.S" />
   </ItemGroup>
 </Project>

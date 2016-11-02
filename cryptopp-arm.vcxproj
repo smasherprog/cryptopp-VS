@@ -71,24 +71,28 @@
     <IntDir>Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>libcryptopp</TargetName>
     <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib64\clang\$(LLVMVersion).$(LLVMMinorVersion)\include</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|ARM'">
     <OutDir>$(SolutionDir)Output\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>libcryptopp</TargetName>
     <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib64\clang\$(LLVMVersion).$(LLVMMinorVersion)\include</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_shared|ARM'">
     <OutDir>$(SolutionDir)Output\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>libcryptopp</TargetName>
     <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib64\clang\$(LLVMVersion).$(LLVMMinorVersion)\include</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_shared|ARM'">
     <OutDir>$(SolutionDir)Output\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>libcryptopp</TargetName>
     <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib64\clang\$(LLVMVersion).$(LLVMMinorVersion)\include</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_static|ARM'">
     <ClCompile>
